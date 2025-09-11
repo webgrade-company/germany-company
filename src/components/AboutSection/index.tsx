@@ -7,7 +7,7 @@ export default function AboutSection() {
   return (
     <div id="about" className="bg-gradient-to-br relative from-slate-900 via-green-900 to-slate-900 py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="absolute z-0 top-5 left-5  w-54 h-54 rounded-full flex items-center justify-center">
+        <div className="absolute z-0 top-80 right-0 md:top-5 md:left-5  w-54 h-54 rounded-full flex items-center justify-center">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
         </div>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -44,16 +44,15 @@ export default function AboutSection() {
             </div>
 
             {/* Floating decorative circles */}
-            <div className="absolute -left-2 -top-10 md:top-8 md:left-8 w-16 h-16 bg-gradient-to-br from-green-400 to-teal-400 rounded-full opacity-80 animate-pulse"></div>
+            <div className="absolute -left-2 -top-10 md:-top-5 md:-left-8 w-20 h-20 bg-gradient-to-br from-green-400 to-teal-400 rounded-full opacity-80 animate-pulse"></div>
             <div className="absolute -bottom-10 right-0 w-24 h-24 bg-gradient-to-br from-teal-400 to-green-500 rounded-full opacity-60 animate-pulse delay-700"></div>
             <div className="absolute top-32 -right-2 w-4 h-4 bg-green-300 rounded-full animate-pulse delay-300"></div>
-            <div className="absolute bottom-32 left-16 w-3 h-3 bg-teal-200 rounded-full animate-pulse delay-1000"></div>
 
             {/* Main Image Container */}
-            <div className="relative z-10 max-w-lg w-full">
-              <div className="relative rounded-3xl p-2 shadow-md">
-                <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden relative">
-                  <Image src={aboutImg.src} fill alt="this about img" />
+            <div className="relative z-10 w-full">
+              <div className="relative rounded-3xl shadow-md">
+                <div className="w-full h-80 lg:h-86 rounded-2xl overflow-hidden relative">
+                  <Image src={aboutImg.src} fill alt="this about img" className="object-cover" />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
