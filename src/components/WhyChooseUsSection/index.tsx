@@ -49,7 +49,7 @@ export default function WhyChooseUsSection() {
             <div className="absolute top-32 right-16 w-4 h-4 bg-green-300 rounded-full animate-pulse delay-300"></div>
 
             <div className="relative z-10 max-w-lg w-full">
-              <div className="relative rounded-3xl shadow-md">
+              <div className="relative rounded-3xl shadow-md group">
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden relative">
                   <Image
                     src={whyChooseUs.src}
@@ -57,6 +57,7 @@ export default function WhyChooseUsSection() {
                     alt="Business team in meeting discussing strategies"
                     className="object-cover"
                   />
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
             </div>
