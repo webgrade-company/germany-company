@@ -5,9 +5,12 @@ import aboutImg from "../../../public/images/aboutImg.jpg";
 
 export default function AboutSection() {
   return (
-    <div id="about" className="bg-gradient-to-br relative from-slate-900 via-green-900 to-slate-900 py-16 px-4">
+    <div
+      id="about"
+      className="bg-gradient-to-br relative from-slate-900 via-green-900 to-slate-900 py-16 px-4"
+    >
       <div className="max-w-7xl mx-auto">
-        <div className="absolute z-0 top-80 right-0 md:top-5 md:left-5  w-54 h-54 rounded-full flex items-center justify-center">
+        <div className="absolute z-0 top-80 right-0 md:top-5 md:left-5  w-54 h-54 rounded-full flex items-center justify-center animate-float">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
         </div>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -52,7 +55,12 @@ export default function AboutSection() {
             <div className="relative z-10 w-full">
               <div className="relative rounded-3xl shadow-md">
                 <div className="w-full h-80 lg:h-86 rounded-2xl overflow-hidden relative">
-                  <Image src={aboutImg.src} fill alt="this about img" className="object-cover" />
+                  <Image
+                    src={aboutImg.src}
+                    fill
+                    alt="this about img"
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>

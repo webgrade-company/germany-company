@@ -79,7 +79,10 @@ export default function StatisticsSection() {
   ];
 
   return (
-    <div className="relative md:h-150 flex items-center justify-center p-4">
+    <div
+      id="career"
+      className="relative md:h-150 flex items-center justify-center p-4"
+    >
       <div className="absolute inset-0">
         {/* Next.js Image placeholder - replace with actual Next.js Image component */}
         <div className="w-full h-full relative">

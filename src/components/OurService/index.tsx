@@ -86,7 +86,7 @@ export default function ServicesSection() {
   ];
 
   return (
-    <div id="our" className="bg-black relative py-16 px-4">
+    <div id="services" className="bg-black relative py-16 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -94,10 +94,10 @@ export default function ServicesSection() {
             Our Services
           </h2>
         </div>
-        <div className="absolute z-0 top-5 left-5  w-54 h-54 rounded-full flex items-center justify-center">
+        <div className="absolute z-0 top-5 left-5  w-54 h-54 rounded-full flex items-center justify-center animate-float">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
         </div>
-        <div className="absolute z-0 bottom-5 right-5  w-54 h-54 rounded-full flex items-center justify-center">
+        <div className="absolute z-0 bottom-5 right-5  w-54 h-54 rounded-full flex items-center justify-center animate-float">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
         </div>
         ;{/* Services Grid */}
@@ -105,7 +105,7 @@ export default function ServicesSection() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-gray-200 w-80 h-100 flex flex-col items-center rounded-3xl px-2 py-5 transition-all duration-300 hover:transform hover:scale-105 border border-white/20 shadow-xl"
+              className="bg-gray-200 w-80 h-100 flex flex-col items-center rounded-3xl px-2 py-5 transition-all duration-300 z-10 hover:transform hover:scale-105 border border-white/20 shadow-xl"
             >
               {/* Illustration */}
               <div className="flex justify-center mb-6">

@@ -5,10 +5,7 @@ import {
   motion,
   useAnimationFrame,
   useMotionValue,
-  useScroll,
-  useSpring,
   useTransform,
-  useVelocity,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 
@@ -40,17 +37,6 @@ export const VelocityScroll: React.FC<VelocityScrollProps> = ({
     className,
   }) => {
     const baseX = useMotionValue(0);
-    const { scrollY } = useScroll();
-    const scrollVelocity = useVelocity(scrollY);
-    const smoothVelocity = useSpring(scrollVelocity, {
-      damping: 50,
-      stiffness: 400,
-    });
-
-    const velocityFactor = useTransform(smoothVelocity, [0, 1000], [0, 5], {
-      clamp: false,
-    });
-
     const [repetitions, setRepetitions] = useState(1);
     const containerRef = useRef<HTMLDivElement>(null);
     const textRef = useRef<HTMLSpanElement>(null);
@@ -66,25 +52,16 @@ export const VelocityScroll: React.FC<VelocityScrollProps> = ({
       };
 
       calculateRepetitions();
-
       window.addEventListener("resize", calculateRepetitions);
       return () => window.removeEventListener("resize", calculateRepetitions);
     }, [children]);
 
+    // 🔑 endi string emas, faqat number
     const x = useTransform(baseX, (v) => `${wrap(-100 / repetitions, 0, v)}%`);
 
-    const directionFactor = useRef<number>(1);
+    // doimiy harakat
     useAnimationFrame((t, delta) => {
-      let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
-
-      if (velocityFactor.get() < 0) {
-        directionFactor.current = -1;
-      } else if (velocityFactor.get() > 0) {
-        directionFactor.current = 1;
-      }
-
-      moveBy += directionFactor.current * moveBy * velocityFactor.get();
-
+      let moveBy = baseVelocity * (delta / 1000);
       baseX.set(baseX.get() + moveBy);
     });
 

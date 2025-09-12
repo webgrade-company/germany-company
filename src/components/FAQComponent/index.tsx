@@ -38,11 +38,14 @@ const FAQComponent = () => {
   };
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-b from-black from-50%  via-black via-50% to-green-950 py-16 px-4">
-      <div className="absolute z-0 top-30 left-20  w-54 h-54 rounded-full flex items-center justify-center">
+    <div
+      id="faq"
+      className="min-h-screen relative bg-gradient-to-b from-black from-50%  via-black via-50% to-green-950 py-16 px-4"
+    >
+      <div className="absolute z-0 top-30 left-20  w-54 h-54 rounded-full flex items-center justify-center animate-float">
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
       </div>
-      <div className="absolute z-0 bottom-50 right-20  w-54 h-54 rounded-full flex items-center justify-center">
+      <div className="absolute z-0 hidden  bottom-50 right-20  w-54 h-54 rounded-full md:flex items-center justify-center animate-float">
         <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
       </div>
       <div className="max-w-4xl mx-auto">
@@ -58,7 +61,7 @@ const FAQComponent = () => {
             >
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-green-300 transition-colors duration-200"
+                className="w-full px-6 py-5 text-left flex items-center justify-between text-white hover:text-green-300 transition-colors duration-300"
               >
                 <span className="text-lg font-medium pr-4">{faq.question}</span>
                 <ChevronDown

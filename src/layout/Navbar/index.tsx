@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
 import {
   Select,
   SelectContent,
@@ -10,11 +9,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Menu, X } from "lucide-react";
 
 const NavbarLayout = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [active, setActive] = useState("Home");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
@@ -22,7 +23,6 @@ const NavbarLayout = () => {
     } else {
       setShow(true);
     }
-    console.log(window.scrollY);
     setLastScrollY(window.scrollY);
   };
 
@@ -33,55 +33,54 @@ const NavbarLayout = () => {
     };
   }, [lastScrollY]);
 
-  // const menuItems = ["Home", "About", "Service", "Career", "Contact", "FAQ"];
-
   const menuItems = [
     { name: "Home", href: "hero" },
     { name: "About", href: "about" },
-    { name: "Service", href: "hero" },
-    { name: "Career", href: "hero" },
-    { name: "Contact", href: "hero" },
-    { name: "FAQ", href: "hero" },
+    { name: "Service", href: "services" },
+    { name: "Career", href: "career" },
+    { name: "Contact", href: "contact" },
+    { name: "FAQ", href: "faq" },
   ];
+
+  const handleScroll = (item: { name: string; href: string }) => {
+    setActive(item.name);
+    const element = document.getElementById(item.href);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY - 60;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+    setMenuOpen(false);
+  };
+
   return (
     <nav
-      className={`w-full h-16 md:h-16 fixed top-0 z-50 transition-transform duration-300 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center p-8 ${
+      className={`w-full h-16 fixed top-0 z-50 transition-transform duration-300 bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center px-6 ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-[1400px] w-[1400px] mx-auto flex justify-between items-center">
-        <div className="text-white">
-          <h2 className="text-2xl font-medium text-white">Companiy</h2>
-        </div>
-        <div className="text-white flex items-center gap-5 bg-gradient-to-r from-green-700/50 via-green-600/50 to-green-700/50 px-10 py-2 rounded-3xl shadow-lg shadow-green-500/40">
+      <div className="max-w-[1400px] w-full mx-auto flex justify-between items-center">
+        <h2 className="text-2xl font-bold text-white">Company</h2>
+
+        <div className="hidden md:flex items-center gap-6">
           {menuItems.map((item, index) => (
             <span
               key={index}
-              onClick={() => {
-                setActive(item.name);
-                const element = document.getElementById(item.href);
-                if(element){
-                  const y = element.getBoundingClientRect().top + window.scrollY - 50;
-                  window.scrollTo({top: y, behavior: 'smooth'})
-                }
-              }} // bosilganda active bo‘ladi
-              className={`cursor-pointer transition-all duration-200 ${
+              onClick={() => handleScroll(item)}
+              className={`cursor-pointer transition-all duration-200 py-1 ${
                 active === item.name
-                  ? "bg-green-500 px-5 py-1 rounded-2xl"
-                  : "hover:text-green-300 py-1"
+                  ? "bg-green-500 px-5 rounded-2xl text-white"
+                  : "hover:text-green-300 text-white"
               }`}
             >
               {item.name}
             </span>
           ))}
         </div>
-        <div>
+
+        <div className="hidden md:flex items-center">
           <Select defaultValue="eng">
-            <SelectTrigger className="w-[180px] bg-green-700 text-white hover:bg-green-700 rounded-lg">
-              <SelectValue
-                className="text-white [&[data-placeholder]]:text-white"
-                placeholder="Select a language"
-              />
+            <SelectTrigger className="w-[140px] bg-green-700 text-white rounded-lg">
+              <SelectValue placeholder="Select a language" />
             </SelectTrigger>
             <SelectContent className="bg-green-900 text-white">
               <SelectGroup>
@@ -92,6 +91,45 @@ const NavbarLayout = () => {
             </SelectContent>
           </Select>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
+        {/* Mobile Dropdown */}
+        {menuOpen && (
+          <div className="absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-md shadow-lg md:hidden flex flex-col items-center gap-4 py-6">
+            {menuItems.map((item, index) => (
+              <span
+                key={index}
+                onClick={() => handleScroll(item)}
+                className={`cursor-pointer transition-all duration-200 py-1 ${
+                  active === item.name
+                    ? "bg-green-500 px-5 rounded-2xl text-white"
+                    : "hover:text-green-300 text-white"
+                }`}
+              >
+                {item.name}
+              </span>
+            ))}
+            <Select defaultValue="eng">
+              <SelectTrigger className="w-[140px] bg-green-700 text-white rounded-lg">
+                <SelectValue placeholder="Select a language" />
+              </SelectTrigger>
+              <SelectContent className="bg-green-900 text-white">
+                <SelectGroup>
+                  <SelectLabel>Language</SelectLabel>
+                  <SelectItem value="eng">English</SelectItem>
+                  <SelectItem value="ru">Russian</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+        )}
       </div>
     </nav>
   );

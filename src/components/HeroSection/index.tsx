@@ -6,7 +6,10 @@ import teamImg from '../../../public/images/teamImg.png';
 
 export default function HeroSection() {
   return (
-    <div id="hero" className="min-h-screen relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center p-8">
+    <div
+      id="hero"
+      className="min-h-screen relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center p-8"
+    >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
         <div className="text-white space-y-8">
@@ -17,12 +20,11 @@ export default function HeroSection() {
             </h2>
           </div>
 
-
-          <div className="absolute z-0 top-5 left-5  w-54 h-54 rounded-full flex items-center justify-center">
+          <div className="absolute z-0 top-5 left-5  w-54 h-54 rounded-full flex items-center justify-center animate-float">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
           </div>
 
-          <div className="absolute z-0 bottom-15 right-20  w-54 h-54 rounded-full flex items-center justify-center">
+          <div className="absolute z-0 bottom-15 right-20  w-54 h-54 rounded-full flex items-center justify-center animate-float">
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
           </div>
 

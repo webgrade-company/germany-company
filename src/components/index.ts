@@ -6,3 +6,4 @@ export { default as WhyChooseUsSection } from "./WhyChooseUsSection";
 export { default as StatisticsSection } from "./StatisticsSection";
 export { default as FAQComponent } from "./FAQComponent";
 export { default as TestimonialsComponent } from "./TestimonialsComponent";
+export { default as ContactComponent } from "./ContactComponent";
