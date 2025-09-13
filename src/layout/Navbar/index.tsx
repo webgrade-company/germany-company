@@ -10,12 +10,28 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Menu, X } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 const NavbarLayout = () => {
+
+  const { t } = useLanguage();
+
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [active, setActive] = useState("Home");
+  const [active, setActive] = useState(t("nav.home"));
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
+
+  useEffect(() => {
+    setActive(t("nav.home"));
+  }, [t])
+
+  useEffect(() => {
+    const stored = localStorage.getItem("language");
+    if (stored) {
+      setLanguage(stored as "en" | "ru");
+    }
+  }, [setLanguage]);
 
   const controlNavbar = () => {
     if (window.scrollY > lastScrollY) {
@@ -34,12 +50,12 @@ const NavbarLayout = () => {
   }, [lastScrollY]);
 
   const menuItems = [
-    { name: "Home", href: "hero" },
-    { name: "About", href: "about" },
-    { name: "Service", href: "services" },
-    { name: "Career", href: "career" },
-    { name: "Contact", href: "contact" },
-    { name: "FAQ", href: "faq" },
+    { name: t("nav.home") as string, href: "hero" },
+    { name: t("nav.about") as string, href: "about" },
+    { name: t("nav.service") as string, href: "services" },
+    { name: t("nav.career") as string, href: "career" },
+    { name: t("nav.faq") as string, href: "faq" },
+    { name: t("nav.contec") as string, href: "contact" },
   ];
 
   const handleScroll = (item: { name: string; href: string }) => {
@@ -59,7 +75,7 @@ const NavbarLayout = () => {
       }`}
     >
       <div className="max-w-[1400px] w-full mx-auto flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-white">Company</h2>
+        <h2 className="text-2xl font-bold text-white"> {t("nav.title")} </h2>
 
         <div className="hidden md:flex items-center gap-6">
           {menuItems.map((item, index) => (
@@ -78,14 +94,20 @@ const NavbarLayout = () => {
         </div>
 
         <div className="hidden md:flex items-center">
-          <Select defaultValue="eng">
+          <Select
+            value={language}
+            onValueChange={(val) => {
+              setLanguage(val as "en" | "ru");
+              localStorage.setItem("language", val);
+            }}
+          >
             <SelectTrigger className="w-[140px] bg-green-700 text-white rounded-lg">
               <SelectValue placeholder="Select a language" />
             </SelectTrigger>
             <SelectContent className="bg-green-900 text-white">
               <SelectGroup>
                 <SelectLabel>Language</SelectLabel>
-                <SelectItem value="eng">English</SelectItem>
+                <SelectItem value="en">English</SelectItem>
                 <SelectItem value="ru">Russian</SelectItem>
               </SelectGroup>
             </SelectContent>
@@ -116,14 +138,20 @@ const NavbarLayout = () => {
                 {item.name}
               </span>
             ))}
-            <Select defaultValue="eng">
+            <Select
+              value={language}
+              onValueChange={(val) => {
+                setLanguage(val as "en" | "ru");
+                localStorage.setItem("language", val);
+              }}
+            >
               <SelectTrigger className="w-[140px] bg-green-700 text-white rounded-lg">
                 <SelectValue placeholder="Select a language" />
               </SelectTrigger>
               <SelectContent className="bg-green-900 text-white">
                 <SelectGroup>
                   <SelectLabel>Language</SelectLabel>
-                  <SelectItem value="eng">English</SelectItem>
+                  <SelectItem value="en">English</SelectItem>
                   <SelectItem value="ru">Russian</SelectItem>
                 </SelectGroup>
               </SelectContent>

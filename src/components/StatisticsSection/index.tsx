@@ -87,10 +87,12 @@ export default function StatisticsSection() {
         {/* Next.js Image placeholder - replace with actual Next.js Image component */}
         <div className="w-full h-full relative">
           <Image
-            src={teamImg.src}
+            src={teamImg}
             fill
             alt="Professional team working in modern office"
             className="object-cover"
+            sizes="100vw"
+            priority
           />
           <div className="absolute inset-0 bg-black/50"></div>
         </div>

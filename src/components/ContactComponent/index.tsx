@@ -1,14 +1,27 @@
-"use client"
+"use client";
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
+
+function ConcentricLoader() {
+  return (
+    <div className="flex w-full flex-col items-center justify-center gap-4">
+      <div className="flex h-16 w-16 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-blue-400 text-4xl text-blue-400">
+        <div className="flex h-12 w-12 animate-spin items-center justify-center rounded-full border-4 border-transparent border-t-red-400 text-2xl text-red-400"></div>
+      </div>
+    </div>
+  );
+}
+
 
 const ContactComponent = () => {
   const [formData, setFormData] = useState({
     name: "",
-    contactNumber: "",
+    contact: "",
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target;
@@ -18,15 +31,34 @@ const ContactComponent = () => {
     }));
   };
 
-  const handleSubmit = () => {
+  const { t } = useLanguage();
+
+  const handleSubmit = async () => {
     console.log("Form submitted:", formData);
-    // Bu yerda form submission logikasini qo'shing
-    alert("Message sent successfully!");
+
+    try {
+      setLoading(true);
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzsAE9_jcPKaZRqK9JXOzvqZJkj1df8L-IevQhJfn6LRKCosyrYYHlkAtVYYXXVHT0f/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+    } catch (error) {
+      console.log(error,"fetch error");
+    } finally {
+      setLoading(false)
+    }
 
     // Form ni tozalash
     setFormData({
       name: "",
-      contactNumber: "",
+      contact: "",
       email: "",
       message: "",
     });
@@ -46,7 +78,7 @@ const ContactComponent = () => {
       <div className="max-w-7xl mx-auto">
         <div className="bg-slate-800/50 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-green-700/50 shadow-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300">
-            Get In Touch
+            {t("contact.title")}
           </h1>
 
           <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -63,7 +95,7 @@ const ContactComponent = () => {
                     required
                   />
                   <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
-                    Name
+                    {t("conteat.name")}
                   </label>
                 </div>
 
@@ -71,15 +103,15 @@ const ContactComponent = () => {
                 <div className="relative">
                   <input
                     type="tel"
-                    name="contactNumber"
-                    value={formData.contactNumber}
+                    name="contact"
+                    value={formData.contact}
                     onChange={handleInputChange}
                     className="w-full bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all duration-300 peer"
                     placeholder="Contact Number"
                     required
                   />
                   <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
-                    Contact Number
+                    {t("conteat.phone")}
                   </label>
                 </div>
 
@@ -95,7 +127,7 @@ const ContactComponent = () => {
                     required
                   />
                   <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
-                    Email
+                    {t("conteat.email")}
                   </label>
                 </div>
 
@@ -111,18 +143,21 @@ const ContactComponent = () => {
                     required
                   />
                   <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
-                    Your Message
+                    {t("conteat.message")}
                   </label>
                 </div>
 
                 {/* Submit Button */}
-                <button
-                  type="button"
-                  onClick={handleSubmit}
-                  className="bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 text-white font-semibold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
-                  SUBMIT
-                </button>
+                <div className="flex items-center gap-8">
+                  <button
+                    type="button"
+                    onClick={handleSubmit}
+                    className="bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 text-white font-semibold py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                  >
+                    {t("contact.button")}
+                  </button>
+                  {loading && <ConcentricLoader />}
+                </div>
               </div>
             </div>
 
@@ -146,7 +181,7 @@ const ContactComponent = () => {
                 {/* Contact Information Overlay */}
                 <div className="relative z-10 h-full flex flex-col justify-center">
                   <h3 className="text-white text-2xl font-bold mb-6">
-                    Contact Information
+                    {t("contact.info.title")}
                   </h3>
 
                   <div className="space-y-4">
@@ -155,7 +190,9 @@ const ContactComponent = () => {
                         <MapPin className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="font-medium">Address</p>
+                        <p className="font-medium">
+                          {t("contact.info.address")}
+                        </p>
                         <p className="text-sm text-slate-300">
                           123 Business St, City, Country
                         </p>
@@ -167,7 +204,10 @@ const ContactComponent = () => {
                         <Phone className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="font-medium">Phone</p>
+                        <p className="font-medium">
+                          {" "}
+                          {t("contact.info.phone")}{" "}
+                        </p>
                         <p className="text-sm text-slate-300">
                           +998 (99) 123-12-12
                         </p>
@@ -179,7 +219,10 @@ const ContactComponent = () => {
                         <Mail className="w-5 h-5" />
                       </div>
                       <div>
-                        <p className="font-medium">Email</p>
+                        <p className="font-medium">
+                          {" "}
+                          {t("contact.info.email")}
+                        </p>
                         <p className="text-sm text-slate-300">
                           contact@company.com
                         </p>

@@ -1,3 +1,5 @@
+"use client"
+import { useLanguage } from "@/context/language-context";
 import {
   MapPin,
   Phone,
@@ -9,19 +11,22 @@ import {
 } from "lucide-react";
 
 const FooterComponent = () => {
+
+  const { t } = useLanguage();
+
   const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Service", href: "/services" },
-    { name: "Terms & Conditions", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
+    { name: t("footer.home"), href: "hero" },
+    { name: t("footer.aboyt"), href: "about" },
+    { name: t("footer.service"), href: "services" },
+    { name: t("footer.terms"), href: "career" },
+    { name: t("footer.faq"), href: "faq" },
   ];
 
   const usefulLinks = [
-    { name: "Why Choose Us", href: "/why-choose-us" },
-    { name: "Our Achievements", href: "/achievements" },
-    { name: "Terms Of Service", href: "/terms-of-service" },
-    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: t("footer.why"), href: "#" },
+    { name: t("footer.our"), href: "#" },
+    { name: t("footer.termsOf"), href: "#" },
+    { name: t("footer.policy"), href: "#" },
   ];
 
   const socialIcons = [
@@ -92,11 +97,10 @@ const FooterComponent = () => {
           <div className="space-y-6">
             <div>
               <h3 className="text-xl font-bold mb-4 text-teal-300">
-                Company Services Pvt Ltd
+                {t("footer.col.title-1")}
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed mb-6">
-                IT Services and IT Consulting, 11-50 employees, Headquarters
-                Dehradun, Uttarakhand, Type Public Company.
+                {t("footer.col.text-1")}
               </p>
 
               <address className="space-y-3 not-italic">
@@ -105,7 +109,7 @@ const FooterComponent = () => {
                     className="w-4 h-4 text-teal-400"
                     aria-hidden="true"
                   />
-                  <span className="text-sm">Madurai, TN, India.</span>
+                  <span className="text-sm">{t("footer.address")}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Phone className="w-4 h-4 text-teal-400" aria-hidden="true" />
@@ -132,14 +136,14 @@ const FooterComponent = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-teal-300">
-              Quick Links
+              {t("footer.col.title-2")}
             </h3>
             <nav>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <li key={index}>
                     <a
-                      href={link.href}
+                      href={`#${link.href}`}
                       className="text-slate-300 hover:text-teal-300 transition-colors duration-200 text-sm"
                     >
                       {link.name}
@@ -153,7 +157,7 @@ const FooterComponent = () => {
           {/* Useful Links */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-teal-300">
-              Useful Links
+              {t("footer.col.title-3")}
             </h3>
             <nav>
               <ul className="space-y-3">
@@ -174,15 +178,13 @@ const FooterComponent = () => {
           {/* Our Features / Newsletter */}
           <div>
             <h3 className="text-xl font-bold mb-6 text-teal-300">
-              Our Features
+              {t("footer.col.title-4")}
             </h3>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
-              With Our Skills Put Together, You Get An Ensemble Capable Of Doing
-              Anything And Everything Your Brand Needs. Subscribe Here To Get
-              Our Latest Updates.
+              {t("footer.col.text-4")}
             </p>
 
-            <form action="/subscribe" method="POST" className="space-y-4">
+            <form action="#" method="POST" className="space-y-4">
               <div className="relative">
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address for newsletter
@@ -200,7 +202,7 @@ const FooterComponent = () => {
                 type="submit"
                 className="w-full bg-gradient-to-r from-teal-500 to-green-500 hover:from-teal-600 hover:to-green-600 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105"
               >
-                Subscribe Now
+                {t("footer.button")}
               </button>
             </form>
           </div>
@@ -209,8 +211,7 @@ const FooterComponent = () => {
         {/* Copyright */}
         <div className="text-center pt-8 mt-8">
           <p className="text-slate-400 text-sm">
-            © {new Date().getFullYear()} Company Services Pvt Ltd. All rights
-            reserved.
+            © {new Date().getFullYear()} {t("footer.end")}
           </p>
         </div>
       </div>

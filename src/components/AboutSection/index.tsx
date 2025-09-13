@@ -1,9 +1,14 @@
+"use client"
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import aboutImg from "../../../public/images/aboutImg.jpg";
+import { useLanguage } from "@/context/language-context";
 
 export default function AboutSection() {
+
+  const { t } = useLanguage();
+
   return (
     <div
       id="about"
@@ -13,23 +18,20 @@ export default function AboutSection() {
         <div className="absolute z-0 top-80 right-0 md:top-5 md:left-5  w-54 h-54 rounded-full flex items-center justify-center animate-float">
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
         </div>
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative grid lg:grid-cols-2 gap-16 items-center z-10">
           {/* Left Content */}
           <div className="text-white space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300">
-              About Us
+              {t("about.title")}
             </h2>
 
             <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur. Aliquam diam nunc risus
-              neque. Cras bibendum mauris accumsan enim. Consectetur interdum
-              convallis et in amet. Nunc a nisl augue et euismod aliquam lacus.
-              Lorem ipsum dolor sit amet consectetur. Aliquam diam nunc.
+              {t("about.text")}
             </p>
 
             <div className="pt-4">
               <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 group">
-                Read More
+                {t("about.button")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </div>
@@ -60,6 +62,9 @@ export default function AboutSection() {
                     fill
                     alt="this about img"
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
                   />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

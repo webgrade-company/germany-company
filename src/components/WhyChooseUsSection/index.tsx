@@ -56,6 +56,9 @@ export default function WhyChooseUsSection() {
                     fill
                     alt="Business team in meeting discussing strategies"
                     className="object-cover"
+                    sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
                   />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

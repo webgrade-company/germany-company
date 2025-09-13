@@ -18,7 +18,7 @@ export default function Home() {
       <ScrollBasedVelocityDemo />
       <OurService />
       <AboutSection />
-      <WhyChooseUsSection />
+      {/* <WhyChooseUsSection /> */}
       <StatisticsSection />
       <FAQComponent />
       <TestimonialsComponent />
@@ -26,10 +26,6 @@ export default function Home() {
     </div>
   );
 }
-
-{/* <div className="absolute z-0 top-20 left-20  w-54 h-54 rounded-full flex items-center justify-center">
-  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
-</div> */}
 
 <div className="absolute z-0 top-20 left-20 w-54 h-54 rounded-full flex items-center justify-center animate-float">
   <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>

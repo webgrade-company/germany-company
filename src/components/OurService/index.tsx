@@ -1,13 +1,17 @@
+"use client"
 import React from "react";
 import { ArrowRight, Search, Palette, Monitor } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 export default function ServicesSection() {
+
+  const { t } = useLanguage();
+
   const services = [
     {
       id: 1,
-      title: "Graphic Design",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
+      title: t("our.card_title-0"),
+      description: t("our.card_text-0"),
       icon: <Palette className="w-8 h-8 text-blue-600" />,
       illustration: (
         <div className="relative">
@@ -31,9 +35,8 @@ export default function ServicesSection() {
     },
     {
       id: 2,
-      title: "SEO",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
+      title: t("our.card_title-1"),
+      description: t("our.card_text-1"),
       icon: <Search className="w-8 h-8 text-blue-600" />,
       illustration: (
         <div className="relative">
@@ -59,9 +62,83 @@ export default function ServicesSection() {
     },
     {
       id: 3,
-      title: "Web App",
-      description:
-        "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
+      title: t("our.card_title-2"),
+      description: t("our.card_text-2"),
+      icon: <Monitor className="w-8 h-8 text-green-600" />,
+      illustration: (
+        <div className="relative">
+          {/* Computer screen */}
+          <div className="w-20 h-12 bg-white border-4 border-gray-800 rounded-lg relative">
+            <div className="absolute top-1 left-1 w-2 h-1 bg-blue-500 rounded"></div>
+            <div className="absolute top-3 left-1 w-6 h-1 bg-blue-400 rounded"></div>
+            <div className="absolute top-5 left-1 w-4 h-1 bg-gray-300 rounded"></div>
+            <div className="absolute top-7 left-1 w-8 h-2 bg-blue-100 rounded"></div>
+            <div className="absolute top-1 right-1 w-4 h-4 bg-blue-200 rounded"></div>
+          </div>
+          {/* Person with laptop */}
+          <div className="absolute -left-1 bottom-0">
+            <div className="w-6 h-6 bg-blue-900 rounded-t-full"></div>
+            <div className="absolute -bottom-2 left-1 w-8 h-2 bg-gray-700 rounded"></div>
+          </div>
+          {/* Floating element */}
+          <div className="absolute -right-1 -top-1 w-3 h-3 bg-blue-400 rounded transform rotate-45"></div>
+        </div>
+      ),
+    },
+    {
+      id: 4,
+      title: t("our.card_title-3"),
+      description: t("our.card_text-3"),
+      icon: <Monitor className="w-8 h-8 text-green-600" />,
+      illustration: (
+        <div className="relative">
+          {/* Computer screen */}
+          <div className="w-20 h-12 bg-white border-4 border-gray-800 rounded-lg relative">
+            <div className="absolute top-1 left-1 w-2 h-1 bg-blue-500 rounded"></div>
+            <div className="absolute top-3 left-1 w-6 h-1 bg-blue-400 rounded"></div>
+            <div className="absolute top-5 left-1 w-4 h-1 bg-gray-300 rounded"></div>
+            <div className="absolute top-7 left-1 w-8 h-2 bg-blue-100 rounded"></div>
+            <div className="absolute top-1 right-1 w-4 h-4 bg-blue-200 rounded"></div>
+          </div>
+          {/* Person with laptop */}
+          <div className="absolute -left-1 bottom-0">
+            <div className="w-6 h-6 bg-blue-900 rounded-t-full"></div>
+            <div className="absolute -bottom-2 left-1 w-8 h-2 bg-gray-700 rounded"></div>
+          </div>
+          {/* Floating element */}
+          <div className="absolute -right-1 -top-1 w-3 h-3 bg-blue-400 rounded transform rotate-45"></div>
+        </div>
+      ),
+    },
+    {
+      id: 5,
+      title: t("our.card_title-4"),
+      description: t("our.card_text-4"),
+      icon: <Monitor className="w-8 h-8 text-green-600" />,
+      illustration: (
+        <div className="relative">
+          {/* Computer screen */}
+          <div className="w-20 h-12 bg-white border-4 border-gray-800 rounded-lg relative">
+            <div className="absolute top-1 left-1 w-2 h-1 bg-blue-500 rounded"></div>
+            <div className="absolute top-3 left-1 w-6 h-1 bg-blue-400 rounded"></div>
+            <div className="absolute top-5 left-1 w-4 h-1 bg-gray-300 rounded"></div>
+            <div className="absolute top-7 left-1 w-8 h-2 bg-blue-100 rounded"></div>
+            <div className="absolute top-1 right-1 w-4 h-4 bg-blue-200 rounded"></div>
+          </div>
+          {/* Person with laptop */}
+          <div className="absolute -left-1 bottom-0">
+            <div className="w-6 h-6 bg-blue-900 rounded-t-full"></div>
+            <div className="absolute -bottom-2 left-1 w-8 h-2 bg-gray-700 rounded"></div>
+          </div>
+          {/* Floating element */}
+          <div className="absolute -right-1 -top-1 w-3 h-3 bg-blue-400 rounded transform rotate-45"></div>
+        </div>
+      ),
+    },
+    {
+      id: 6,
+      title: t("our.card_title-5"),
+      description: t("our.card_text-5"),
       icon: <Monitor className="w-8 h-8 text-green-600" />,
       illustration: (
         <div className="relative">
@@ -91,7 +168,7 @@ export default function ServicesSection() {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-teal-300 mb-4">
-            Our Services
+            {t("our.title")}
           </h2>
         </div>
         <div className="absolute z-0 top-5 left-5  w-54 h-54 rounded-full flex items-center justify-center animate-float">
@@ -101,7 +178,7 @@ export default function ServicesSection() {
           <div className="absolute inset-0 rounded-full bg-gradient-to-r from-teal-300 to-teal-400 blur-3xl"></div>
         </div>
         ;{/* Services Grid */}
-        <div className="flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8 mb-12">
+        <div className="grid md:grid-cols-3 grid-cols-1 lg:grid-cols-3 justify-items-center gap-8 mb-12">
           {services.map((service) => (
             <div
               key={service.id}

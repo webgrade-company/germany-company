@@ -1,10 +1,12 @@
-
+"use client"
 import Image from "next/image";
 import React from "react";
-import teamImg from '../../../public/images/teamImg.png';
-
+import teamImg from "../../../public/images/teamImg.png";
+import { useLanguage } from "@/context/language-context";
 
 export default function HeroSection() {
+  const { t } = useLanguage();
+
   return (
     <div
       id="hero"
@@ -15,8 +17,10 @@ export default function HeroSection() {
         <div className="text-white space-y-8">
           <div className="space-y-2">
             <h2 className="text-lg z-10 lg:text-xl text-green-300 font-normal">
-              Welcome to{" "}
-              <span className="underline font-semibold">Company Name!</span>
+              {t("hero.welcome")[0]}{" "}
+              <span className="underline font-semibold">
+                {t("hero.welcome")[1]}
+              </span>
             </h2>
           </div>
 
@@ -30,19 +34,20 @@ export default function HeroSection() {
 
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              Your <span className="text-green-400">Problems</span>,
+              {t("hero.title")[0]}{" "}
+              <span className="text-green-400"> {t("hero.title")[1]} </span>,
             </h1>
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-              <span className="text-green-400">Our</span> Solutions.
+              <span className="text-green-400">{t("hero.title")[2]}</span>{" "}
+              {t("hero.title")[3]}
             </h1>
           </div>
           <p className="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-lg">
-            Elevate and Transform your business to Digital with our Innovative
-            Ideas.
+            {t("hero.text")}
           </p>
           <div className="pt-6">
             <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
-              Explore
+              {t("hero.button")}
             </button>
           </div>
           {/* Floating dots for left side */}
@@ -96,6 +101,9 @@ export default function HeroSection() {
                 height={500}
                 alt="this Team images"
                 className="absolute -top-24"
+                sizes="(max-width: 768px) 100vw,
+         (max-width: 1200px) 50vw,
+         33vw"
               />
             </div>
           </div>
