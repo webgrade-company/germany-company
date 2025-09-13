@@ -29,14 +29,14 @@ const translations = {
 
     //Hero Section
 
-    "hero.welcome": ["Welcome to", "Company Name!"],
+    "hero.welcome": ["Welcome to", "OOO ASI GLOBAL!"],
     "hero.title": ["Your", "Problems", "Our", "Solutions"],
     "hero.text":
       "Elevate and Transform your business to Digital with our Innovative Ideas.",
     "hero.button": "Explore",
 
     // Scroll Text
-    "scroll.title": "Welcome to Company",
+    "scroll.title": "Welcome to OOO ASI GLOBAL",
 
     // Our Service
     "our.title": "Our Services",
@@ -102,7 +102,7 @@ const translations = {
     "contact.button": "SUBMIT",
 
     // Footer
-    "footer.col.title-1": "Company Services Pvt Ltd",
+    "footer.col.title-1": "OOO ASI GLOBAL Services Pvt Ltd",
     "footer.col.text-1":
       "IT Services and IT Consulting, 11-50 employees, Headquarters Dehradun, Uttarakhand, Type Public Company.",
     "footer.address": "Chilonzor, TK, Uzbekistan",
@@ -135,14 +135,14 @@ const translations = {
 
     //Hero Section
 
-    "hero.welcome": ["Добро пожаловать в", "Название компании!"],
+    "hero.welcome": ["Добро пожаловать в", "OOO ASI GLOBAL!"],
     "hero.title": ["Твой", "Проблемы", "Наш", "Решения"],
     "hero.text":
       "Поднимите и трансформируйте свой бизнес в цифровой формат c помощью наших инновационных идей.",
     "hero.button": "Исследовать",
 
     // Scroll Text
-    "scroll.title": "Добро пожаловать в компанию",
+    "scroll.title": "Добро пожаловать в OOO ASI GLOBAL",
 
     // Our Service
     "our.title": "Наши услуги",
@@ -209,7 +209,7 @@ const translations = {
     "contact.button": "Oтправить",
 
     // Footer
-    "footer.col.title-1": "Компания Услуги Pvt Ltd",
+    "footer.col.title-1": "OOO ASI GLOBAL Услуги Pvt Ltd",
     "footer.col.text-1":
       "ИТ-услуги и ИТ-консалтинг, 11-50 сотрудников, штаб-квартира в Дехрадуне, Уттаракханд, тип: публичная компания.",
     "footer.address": "Чиланзар, TK, Узбекистан",

@@ -96,7 +96,7 @@ const FooterComponent = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-xl font-bold mb-4 text-teal-300">
+              <h3 className="text-xl font-bold whitespace-nowrap md:mr-10 mb-4 text-teal-300">
                 {t("footer.col.title-1")}
               </h3>
               <p className="text-slate-300 text-sm leading-relaxed mb-6">

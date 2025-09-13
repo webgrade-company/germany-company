@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
+import toast from "react-hot-toast";
 
 function ConcentricLoader() {
   return (
@@ -13,7 +14,6 @@ function ConcentricLoader() {
   );
 }
 
-
 const ContactComponent = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -23,23 +23,65 @@ const ContactComponent = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
+
+    let newValue = value;
+
+    if (name === "contact") {
+      // faqat raqam qoldirish
+      newValue = value.replace(/[^0-9]/g, "");
+    }
+
+    if (name === "email") {
+      // bo'sh qoldirilsa bo'ladi, lekin format noto‘g‘ri bo‘lsa yozib bo‘lmaydi
+      // faqat email formatidagi belgilar qoldiriladi
+      newValue = value.replace(/[^a-zA-Z0-9@._-]/g, "");
+    }
+
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: newValue,
     }));
   };
 
   const { t } = useLanguage();
 
   const handleSubmit = async () => {
-    console.log("Form submitted:", formData);
+    // Form validation
+    if (!formData.name.trim()) {
+      toast.error("Please enter your name");
+      return;
+    }
+
+    if (!formData.contact.trim()) {
+      toast.error("Please enter your contact number");
+      return;
+    }
+
+    if (!formData.email.trim()) {
+      toast.error("Please enter your email");
+      return;
+    }
+
+    // Email regex check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+
+    if (!formData.message.trim()) {
+      toast.error("Please enter your message");
+      return;
+    }
 
     try {
       setLoading(true);
       await fetch(
-        "https://script.google.com/macros/s/AKfycbzsAE9_jcPKaZRqK9JXOzvqZJkj1df8L-IevQhJfn6LRKCosyrYYHlkAtVYYXXVHT0f/exec",
+        "https://script.google.com/macros/s/AKfycbz8GH5EYRLVRHHfCuSkxcxk1d62rbn9QYcqxVEtbOLBXpsjhAhhaPehvaSd4j_bm3vGZw/exec",
         {
           method: "POST",
           mode: "no-cors",
@@ -49,19 +91,21 @@ const ContactComponent = () => {
           body: JSON.stringify(formData),
         }
       );
-    } catch (error) {
-      console.log(error,"fetch error");
-    } finally {
-      setLoading(false)
-    }
+      toast.success("Successfully Completed");
 
-    // Form ni tozalash
-    setFormData({
-      name: "",
-      contact: "",
-      email: "",
-      message: "",
-    });
+      // Form reset
+      setFormData({
+        name: "",
+        contact: "",
+        email: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error("Something went wrong");
+      console.log(error, "fetch error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -109,6 +153,8 @@ const ContactComponent = () => {
                     className="w-full bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all duration-300 peer"
                     placeholder="Contact Number"
                     required
+                    inputMode="numeric"
+                    maxLength={12}
                   />
                   <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
                     {t("conteat.phone")}
