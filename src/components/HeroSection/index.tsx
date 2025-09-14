@@ -47,7 +47,13 @@ export default function HeroSection() {
             {t("hero.text")}
           </p>
           <div className="pt-6">
-            <button className="bg-gradient-to-r flex items-center gap-3 from-green-500 to-teal-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 shadow-lg hover:shadow-xl group">
+            <button onClick={() => {
+              const element = document.getElementById("contact");
+              if(element){
+                const y = element.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({top: y, behavior: "smooth"});
+              }
+            }} className="bg-gradient-to-r flex items-center gap-3 from-green-500 to-teal-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 shadow-lg hover:shadow-xl group">
               {t("hero.button")}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>

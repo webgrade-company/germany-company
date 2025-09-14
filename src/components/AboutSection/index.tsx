@@ -32,7 +32,17 @@ export default function AboutSection() {
             </p>
 
             <div className="pt-4">
-              <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 group">
+              <button
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  if (element) {
+                    const y =
+                      element.getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: y, behavior: "smooth" });
+                  }
+                }}
+                className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 group"
+              >
                 {t("about.button")}
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
               </button>

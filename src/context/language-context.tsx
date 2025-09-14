@@ -66,7 +66,7 @@ const translations = {
       "Our company delivers complete IT solutions worldwide, with headquarters in Uzbekistan. From custom websites, mobile applications, and artificial intelligence technologies to a wide range of other digital services, we help businesses grow and innovate in the digital age. We are not limited to a few areas of expertise — our team is capable of handling projects of different scale and complexity, whether it’s a small business solution or an enterprise-level system.",
     "about.text-2":
       "With a strong focus on quality, innovation, and international standards, we aim to provide technology that creates real value. By combining modern tools with creative approaches, we ensure every project we deliver helps our clients achieve success in today’s fast-changing digital world.",
-    "about.button": "Read More",
+    "about.button": "Placing An Order",
 
     // FAQ
     "faq.title": "FAQ",
@@ -176,7 +176,7 @@ const translations = {
       "Наша компания предоставляет комплексные IT-решения по всему миру, со штаб-квартирой в Узбекистане. От разработки индивидуальных веб-сайтов, мобильных приложений и технологий искусственного интеллекта до широкого спектра других цифровых услуг, мы помогаем компаниям расти и внедрять инновации в цифровую эпоху. Мы не ограничиваемся несколькими областями специализации — наша команда способна справиться с проектами любого масштаба и сложности, будь то решения для малого бизнеса или системы корпоративного уровня.",
     "about.text-2":
       "Уделяя особое внимание качеству, инновациям и международным стандартам, мы стремимся предоставлять технологии, которые создают реальную ценность. Сочетая современные инструменты с креативным подходом, мы гарантируем, что каждый наш проект поможет нашим клиентам добиться успеха в современном быстро меняющемся цифровом мире.",
-    "about.button": "Читать далее",
+    "about.button": "Размещение Заказа",
 
     // FAQ
     "faq.title": "ЧЗВ",
