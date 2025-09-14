@@ -22,6 +22,26 @@ const NavbarLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
 
+  const menuRef = React.useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
+
   useEffect(() => {
     setActive(t("nav.home"));
   }, [t])
@@ -53,7 +73,7 @@ const NavbarLayout = () => {
     { name: t("nav.home") as string, href: "hero" },
     { name: t("nav.about") as string, href: "about" },
     { name: t("nav.service") as string, href: "services" },
-    { name: t("nav.career") as string, href: "career" },
+    // { name: t("nav.career") as string, href: "career" },
     { name: t("nav.faq") as string, href: "faq" },
     { name: t("nav.contec") as string, href: "contact" },
   ];
@@ -124,7 +144,10 @@ const NavbarLayout = () => {
 
         {/* Mobile Dropdown */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-md shadow-lg md:hidden flex flex-col items-center gap-4 py-6">
+          <div
+            ref={menuRef}
+            className="absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-md shadow-lg md:hidden flex flex-col items-center gap-4 py-6"
+          >
             {menuItems.map((item, index) => (
               <span
                 key={index}

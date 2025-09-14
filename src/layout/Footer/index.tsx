@@ -154,7 +154,7 @@ const FooterComponent = () => {
           </div>
 
           {/* Useful Links */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-6 text-teal-300">
               {t("footer.col.title-3")}
             </h3>
@@ -172,10 +172,10 @@ const FooterComponent = () => {
                 ))}
               </ul>
             </nav>
-          </div>
+          </div> */}
 
           {/* Our Features / Newsletter */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold mb-6 text-teal-300">
               {t("footer.col.title-4")}
             </h3>
@@ -183,7 +183,7 @@ const FooterComponent = () => {
               {t("footer.col.text-4")}
             </p>
 
-            {/* <form action="#" method="POST" className="space-y-4">
+            <form action="#" method="POST" className="space-y-4">
               <div className="relative">
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address for newsletter
@@ -203,8 +203,8 @@ const FooterComponent = () => {
               >
                 {t("footer.button")}
               </button>
-            </form> */}
-          </div>
+            </form>
+          </div> */}
         </div>
 
         {/* Copyright */}

@@ -124,7 +124,7 @@ const translations = {
     "footer.col.text-4":
       "With Our Skills Put Together, You Get An Ensemble Capable Of Doing Anything And Everything Your Brand Needs. Subscribe Here To Get Our Latest Updates.",
     "footer.button": "Subscribe Now",
-    "footer.end": "© 2025 Company Services Pvt Ltd. All rights reserved",
+    "footer.end": "Company Services Pvt Ltd. All rights reserved",
   },
   ru: {
     // Navbar_Section
@@ -234,7 +234,7 @@ const translations = {
     "footer.col.text-4":
       "Объединив наши навыки, вы получите команду, способную сделать всё, что нужно вашему бренду. Подпишитесь здесь, чтобы получать наши последние обновления.",
     "footer.button": "Подпишитесь сейчас",
-    "footer.end": "© 2025 Company Services Pvt Ltd. Все права защищены.",
+    "footer.end": "Company Services Pvt Ltd. Все права защищены.",
   },
 };
 
