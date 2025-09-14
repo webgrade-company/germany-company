@@ -12,7 +12,7 @@ export default function ScrollBasedVelocityDemo() {
       <VelocityScroll
         className="px-6 text-center text-4xl font-bold tracking-tight md:text-7xl md:leading-[5rem]"
         text={`${t("scroll.title")}`}
-        default_velocity={5}
+        default_velocity={2}
       />
     </div>
   );

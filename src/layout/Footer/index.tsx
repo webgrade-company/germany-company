@@ -74,8 +74,7 @@ const FooterComponent = () => {
   return (
     <footer className="bg-gradient-to-b from-green-950 via-green-900 to-teal-700 text-white py-16 px-4">
       <div className="max-w-7xl mx-auto">
-        {/* Social Media Icons */}
-        <div className="flex justify-center sm:justify-end space-x-4 mb-10">
+        {/* <div className="flex justify-center sm:justify-end space-x-4 mb-10">
           {socialIcons.map((social, index) => {
             const IconComponent = social.icon;
             return (
@@ -91,7 +90,7 @@ const FooterComponent = () => {
               </a>
             );
           })}
-        </div>
+        </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
@@ -114,19 +113,19 @@ const FooterComponent = () => {
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Phone className="w-4 h-4 text-teal-400" aria-hidden="true" />
                   <a
-                    href="tel:+912345456343"
+                    href="tel:+4917661084330"
                     className="text-sm hover:text-teal-300 transition-colors"
                   >
-                    +91 23454 56343
+                    +49 176 61084330
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Mail className="w-4 h-4 text-teal-400" aria-hidden="true" />
                   <a
-                    href="mailto:company@gmail.com"
+                    href="mailto:asiglobalit@sgafurbekov.com"
                     className="text-sm hover:text-teal-300 transition-colors"
                   >
-                    company@gmail.com
+                    asiglobalit@sgafurbekov.com
                   </a>
                 </div>
               </address>
@@ -184,7 +183,7 @@ const FooterComponent = () => {
               {t("footer.col.text-4")}
             </p>
 
-            <form action="#" method="POST" className="space-y-4">
+            {/* <form action="#" method="POST" className="space-y-4">
               <div className="relative">
                 <label htmlFor="newsletter-email" className="sr-only">
                   Email address for newsletter
@@ -204,7 +203,7 @@ const FooterComponent = () => {
               >
                 {t("footer.button")}
               </button>
-            </form>
+            </form> */}
           </div>
         </div>
 

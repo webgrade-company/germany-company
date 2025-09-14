@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -6,7 +6,6 @@ import aboutImg from "../../../public/images/aboutImg.jpg";
 import { useLanguage } from "@/context/language-context";
 
 export default function AboutSection() {
-
   const { t } = useLanguage();
 
   return (
@@ -27,6 +26,9 @@ export default function AboutSection() {
 
             <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
               {t("about.text")}
+            </p>
+            <p className="text-lg lg:text-xl text-gray-300 leading-relaxed">
+              {t("about.text-2")}
             </p>
 
             <div className="pt-4">
@@ -56,18 +58,18 @@ export default function AboutSection() {
             {/* Main Image Container */}
             <div className="relative z-10 w-full">
               <div className="relative rounded-3xl shadow-md">
-                <div className="w-full h-80 lg:h-86 rounded-2xl overflow-hidden relative">
+                {/* <div className="w-full h-80 lg:h-86 rounded-2xl overflow-hidden relative">
                   <Image
                     src={aboutImg.src}
                     fill
                     alt="this about img"
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw,
-         (max-width: 1200px) 50vw,
-         33vw"
+                    (max-width: 1200px) 50vw,
+                    33vw"
                   />
                   <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

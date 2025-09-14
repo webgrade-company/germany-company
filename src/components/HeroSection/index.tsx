@@ -3,6 +3,7 @@ import Image from "next/image";
 import React from "react";
 import teamImg from "../../../public/images/teamImg.png";
 import { useLanguage } from "@/context/language-context";
+import { ArrowRight } from "lucide-react";
 
 export default function HeroSection() {
   const { t } = useLanguage();
@@ -46,8 +47,9 @@ export default function HeroSection() {
             {t("hero.text")}
           </p>
           <div className="pt-6">
-            <button className="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 shadow-lg hover:shadow-xl">
+            <button className="bg-gradient-to-r flex items-center gap-3 from-green-500 to-teal-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 shadow-lg hover:shadow-xl group">
               {t("hero.button")}
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
           {/* Floating dots for left side */}

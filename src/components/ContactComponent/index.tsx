@@ -32,7 +32,7 @@ const ContactComponent = () => {
 
     if (name === "contact") {
       // faqat raqam qoldirish
-      newValue = value.replace(/[^0-9]/g, "");
+      newValue = value.replace(/[^0-9+]/g, "");
     }
 
     if (name === "email") {
@@ -137,8 +137,9 @@ const ContactComponent = () => {
                     className="w-full bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all duration-300 peer"
                     placeholder="Name"
                     required
+                    id="name"
                   />
-                  <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label htmlFor="name" className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
                     {t("conteat.name")}
                   </label>
                 </div>
@@ -155,8 +156,9 @@ const ContactComponent = () => {
                     required
                     inputMode="numeric"
                     maxLength={12}
+                    id="number"
                   />
-                  <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label htmlFor="number" className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
                     {t("conteat.phone")}
                   </label>
                 </div>
@@ -171,8 +173,12 @@ const ContactComponent = () => {
                     className="w-full bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all duration-300 peer"
                     placeholder="Email"
                     required
+                    id="email"
                   />
-                  <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label
+                    htmlFor="email"
+                    className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800"
+                  >
                     {t("conteat.email")}
                   </label>
                 </div>
@@ -187,8 +193,9 @@ const ContactComponent = () => {
                     className="w-full bg-slate-700/50 border border-slate-600 rounded-xl px-4 py-4 text-white placeholder-transparent focus:outline-none focus:ring-2 focus:ring-teal-400 focus:border-transparent transition-all duration-300 peer resize-none"
                     placeholder="Your Message"
                     required
+                    id="message"
                   />
-                  <label className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label htmlFor="message" className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
                     {t("conteat.message")}
                   </label>
                 </div>
@@ -211,7 +218,7 @@ const ContactComponent = () => {
             <div className="lg:pl-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 h-full min-h-[400px] relative overflow-hidden">
                 {/* Decorative map placeholder */}
-                <div className="absolute inset-0 opacity-20">
+                {/* <div className="absolute inset-0 opacity-20">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22860.887504111746!2d69.26042916800169!3d41.32687811275865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b477ac0b7cf%3A0x4bca93d14dec7148!2sEmbassy%20of%20the%20Federal%20Republic%20of%20Germany!5e0!3m2!1sen!2s!4v1757695943031!5m2!1sen!2s"
                     width="600"
@@ -222,7 +229,7 @@ const ContactComponent = () => {
                     referrerPolicy="no-referrer-when-downgrade"
                     className="w-full h-[450px] rounded-xl shadow-lg"
                   />
-                </div>
+                </div> */}
 
                 {/* Contact Information Overlay */}
                 <div className="relative z-10 h-full flex flex-col justify-center">
@@ -255,7 +262,7 @@ const ContactComponent = () => {
                           {t("contact.info.phone")}{" "}
                         </p>
                         <p className="text-sm text-slate-300">
-                          +998 (99) 123-12-12
+                          +49 176 61084330
                         </p>
                       </div>
                     </div>
@@ -270,7 +277,7 @@ const ContactComponent = () => {
                           {t("contact.info.email")}
                         </p>
                         <p className="text-sm text-slate-300">
-                          contact@company.com
+                          asiglobalit@sgafurbekov.com
                         </p>
                       </div>
                     </div>

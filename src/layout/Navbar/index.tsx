@@ -51,8 +51,8 @@ const NavbarLayout = () => {
 
   const menuItems = [
     { name: t("nav.home") as string, href: "hero" },
-    { name: t("nav.about") as string, href: "about" },
     { name: t("nav.service") as string, href: "services" },
+    { name: t("nav.about") as string, href: "about" },
     { name: t("nav.career") as string, href: "career" },
     { name: t("nav.faq") as string, href: "faq" },
     { name: t("nav.contec") as string, href: "contact" },

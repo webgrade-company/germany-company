@@ -25,63 +25,66 @@ const translations = {
     "nav.career": "Career",
     "nav.faq": "FAQ",
     "nav.contec": "Contact",
-    "nav.title": "company",
+    "nav.title": "ASI Global IT",
 
     //Hero Section
 
-    "hero.welcome": ["Welcome to", "OOO ASI GLOBAL!"],
-    "hero.title": ["Your", "Problems", "Our", "Solutions"],
-    "hero.text":
-      "Elevate and Transform your business to Digital with our Innovative Ideas.",
+    "hero.welcome": ["IT Solutions for Every Challenge"],
+    "hero.title": ["Your", "Problems", "IT", "Answers"],
+    "hero.text": "Turning Issues Into IT Solutions",
     "hero.button": "Explore",
 
     // Scroll Text
-    "scroll.title": "Welcome to OOO ASI GLOBAL",
+    "scroll.title": "Welcome to ASI Global IT",
 
     // Our Service
     "our.title": "Our Services",
-    "our.card_title-0": "Graphic Design",
+    "our.card_title-0": "Website Development",
     "our.card_text-0":
-      "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-1": "Graphic Design",
+      "We design and develop modern, responsive, and high-performing websites tailored to your business goals.",
+    "our.card_title-1": "Mobile App Development",
     "our.card_text-1":
-      "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-2": "Graphic Design",
+      "From iOS to Android, we build user-friendly mobile applications that bring your ideas to life.",
+    "our.card_title-2": "Artificial Intelligence Solutions",
     "our.card_text-2":
-      "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-3": "Graphic Design",
+      "We implement AI-powered technologies that automate processes, analyze data, and create smarter business decisions.",
+    "our.card_title-3": "CRM Systems",
     "our.card_text-3":
-      "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-4": "Graphic Design",
+      "Custom CRM solutions designed to improve customer relationships, streamline sales, and boost efficiency.",
+    "our.card_title-4": "ERP Systems",
     "our.card_text-4":
-      "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-5": "Graphic Design",
+      "End-to-end ERP systems that integrate business operations, finance, and resources into one seamless platform.",
+    "our.card_title-5": "HealthTech Solutions",
     "our.card_text-5":
-      "Lorem ipsum dolor sit amet consectetur. Tempor tellus integer urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
+      "Innovative healthcare technologies that enhance patient care, streamline operations, and support medical professionals.",
+
+    "our.button": "Explore More IT Solutions",
 
     //About Us
     "about.title": "About Us",
     "about.text":
-      "Lorem ipsum dolor sit amet consectetur. Aliquam diam nunc risus neque. Cras bibendum mauris accumsan enim. Consectetur interdum convallis et in amet. Nunc a nisl augue et euismod aliquam lacus. Lorem ipsum dolor sit amet consectetur. Aliquam diam nunc.",
+      "Our company delivers complete IT solutions worldwide, with headquarters in Uzbekistan. From custom websites, mobile applications, and artificial intelligence technologies to a wide range of other digital services, we help businesses grow and innovate in the digital age. We are not limited to a few areas of expertise — our team is capable of handling projects of different scale and complexity, whether it’s a small business solution or an enterprise-level system.",
+    "about.text-2":
+      "With a strong focus on quality, innovation, and international standards, we aim to provide technology that creates real value. By combining modern tools with creative approaches, we ensure every project we deliver helps our clients achieve success in today’s fast-changing digital world.",
     "about.button": "Read More",
 
     // FAQ
     "faq.title": "FAQ",
-    "faq.problem-1": "How much will cost?",
+    "faq.problem-1": "Where is your company located?",
     "faq.answer-1":
-      "The cost varies depending on your project requirements, complexity, and timeline. We provide detailed quotes after understanding your specific needs. Contact us for a free consultation and personalized pricing.",
-    "faq.problem-2": "How long it takes to design?",
+      "We are headquartered in Uzbekistan, serving clients worldwide with reliable IT solutions.",
+    "faq.problem-2": "How are payments processed?",
     "faq.answer-2":
-      "Design timelines typically range from 2-8 weeks depending on project scope. Simple websites take 2-3 weeks, while complex applications may require 6-8 weeks. We'll provide a detailed timeline during our initial consultation.",
-    "faq.problem-3": "How do I associate with IT Company?",
+      "We follow a 50/50 payment model: 50% upfront and 50% upon project completion. Payments can be made through the method most convenient for you, including international transfers.",
+    "faq.problem-3": "Do you provide support after project delivery?",
     "faq.answer-3":
-      "Getting started is easy! Simply contact us through our website, email, or phone. We'll schedule a consultation to discuss your project, provide a proposal, and once approved, we'll begin working together with a clear contract and timeline.",
-    "faq.problem-4": "Can ou help my current site look more Professional?",
+      "Yes. We offer dedicated post-project support to ensure smooth operation and long-term stability of your solution.",
+    "faq.problem-4": "Can changes be made during the project?",
     "faq.answer-4":
-      "Absolutely! We specialize in website redesigns and improvements. We can enhance your current site's design, user experience, performance, and functionality to give it a more professional and modern appearance.",
-    "faq.problem-5": "When do I pay?",
+      "Yes, changes are possible during the project. However, please note that significant modifications may affect both the timeline and the cost.",
+    "faq.problem-5": "Do you provide hosting, domains, and servers?",
     "faq.answer-5":
-      "We typically work with a payment schedule: 50% upfront to begin the project, and 50% upon completion. For larger projects, we may arrange milestone-based payments. Payment terms will be clearly outlined in your contract.",
+      "Yes. We can supply and manage hosting, domain registration, and server infrastructure if required.",
 
     //TESTIMONIALS
     "testimonia.enter": "TESTIMONIALS",
@@ -102,7 +105,7 @@ const translations = {
     "contact.button": "SUBMIT",
 
     // Footer
-    "footer.col.title-1": "OOO ASI GLOBAL Services Pvt Ltd",
+    "footer.col.title-1": "ASI Global IT Services Pvt Ltd",
     "footer.col.text-1":
       "IT Services and IT Consulting, 11-50 employees, Headquarters Dehradun, Uttarakhand, Type Public Company.",
     "footer.address": "Chilonzor, TK, Uzbekistan",
@@ -126,69 +129,72 @@ const translations = {
   ru: {
     // Navbar_Section
     "nav.home": "Дом",
-    "nav.about": "О",
+    "nav.about": "О Нас",
     "nav.service": "Услуга",
     "nav.career": "Карьера",
     "nav.faq": "ЧЗВ",
     "nav.contec": "Контекст",
-    "nav.title": "Компания",
+    "nav.title": "ASI Global IT",
 
     //Hero Section
 
-    "hero.welcome": ["Добро пожаловать в", "OOO ASI GLOBAL!"],
+    "hero.welcome": ["Добро пожаловать в", "ASI Global IT!"],
     "hero.title": ["Твой", "Проблемы", "Наш", "Решения"],
     "hero.text":
       "Поднимите и трансформируйте свой бизнес в цифровой формат c помощью наших инновационных идей.",
     "hero.button": "Исследовать",
 
     // Scroll Text
-    "scroll.title": "Добро пожаловать в OOO ASI GLOBAL",
+    "scroll.title": "Добро пожаловать в ASI Global IT",
 
     // Our Service
     "our.title": "Наши услуги",
-    "our.card_title-0": "Графический дизайн",
+    "our.card_title-0": "Разработка веб-сайтов",
     "our.card_text-0":
-      "Lorem ipsum dolor сидеть amet consectetur. Tempor Tellus целое число urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-1": "Графический дизайн",
+      "Мы проектируем и разрабатываем современные, адаптивные и высокопроизводительные веб-сайты, соответствующие целям вашего бизнеса.",
+    "our.card_title-1": "Разработка мобильных приложений",
     "our.card_text-1":
-      "Lorem ipsum dolor сидеть amet consectetur. Tempor Tellus целое число urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-2": "Графический дизайн",
+      "От iOS до Android — мы создаем удобные мобильные приложения, которые воплощают ваши идеи в жизнь.",
+    "our.card_title-2": "Artificial Intelligence Solutions",
     "our.card_text-2":
-      "Lorem ipsum dolor сидеть amet consectetur. Tempor Tellus целое число urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-3": "Графический дизайн",
+      "Мы внедряем технологии на базе искусственного интеллекта, которые автоматизируют процессы, анализируют данные и принимают более разумные бизнес-решения.",
+    "our.card_title-3": "CRM-системы",
     "our.card_text-3":
-      "Lorem ipsum dolor сидеть amet consectetur. Tempor Tellus целое число urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-4": "Графический дизайн",
+      "Индивидуальные CRM-решения, разработанные для улучшения отношений с клиентами, оптимизации продаж и повышения эффективности.",
+    "our.card_title-4": "ERP-системы",
     "our.card_text-4":
-      "Lorem ipsum dolor сидеть amet consectetur. Tempor Tellus целое число urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
-    "our.card_title-5": "Графический дизайн",
+      "Комплексные ERP-системы, которые интегрируют бизнес-операции, финансы и ресурсы в единую целостную платформу.",
+    "our.card_title-5": "Решения для здоровья",
     "our.card_text-5":
-      "Lorem ipsum dolor сидеть amet consectetur. Tempor Tellus целое число urna risus. Molestie tempus posuere egestas laoreet eget nisl. Malesuada sit est non etiam in lacus",
+      "Инновационные технологии в здравоохранении, которые улучшают уход за пациентами, оптимизируют операции и поддерживают медицинских работников.",
+
+    "our.button": "Узнайте больше об ИТ-решениях",
 
     //About Us
     "about.title": "О нас",
     "about.text":
-      "Lorem ipsum dolor сидеть amet consectetur. Aliquam diam nunc risus neque. Cras bibendum mauris accumsan enim. Consectetur interdum convallis et in amet. Nunc a nisl augue et euismod aliquam lacus. Lorem ipsum dolor сидеть amet consectetur. Аликвам диам нунк.",
+      "Наша компания предоставляет комплексные IT-решения по всему миру, со штаб-квартирой в Узбекистане. От разработки индивидуальных веб-сайтов, мобильных приложений и технологий искусственного интеллекта до широкого спектра других цифровых услуг, мы помогаем компаниям расти и внедрять инновации в цифровую эпоху. Мы не ограничиваемся несколькими областями специализации — наша команда способна справиться с проектами любого масштаба и сложности, будь то решения для малого бизнеса или системы корпоративного уровня.",
+    "about.text-2":
+      "Уделяя особое внимание качеству, инновациям и международным стандартам, мы стремимся предоставлять технологии, которые создают реальную ценность. Сочетая современные инструменты с креативным подходом, мы гарантируем, что каждый наш проект поможет нашим клиентам добиться успеха в современном быстро меняющемся цифровом мире.",
     "about.button": "Читать далее",
 
     // FAQ
     "faq.title": "ЧЗВ",
-    "faq.problem-1": "Сколько это будет стоить?",
+    "faq.problem-1": "Где находится ваша компания?",
     "faq.answer-1":
-      "Стоимость варьируется в зависимости от требований вашего проекта, его сложности и сроков. Мы предоставляем подробные сметы после изучения ваших конкретных потребностей. Свяжитесь с нами для бесплатной консультации и персонального расчета стоимости.",
-    "faq.problem-2": "Сколько времени занимает проектирование?",
+      "Наш главный офис находится в Узбекистане, мы предоставляем клиентам по всему миру надежные ИТ-решения.",
+    "faq.problem-2": "Как обрабатываются платежи?",
     "faq.answer-2":
-      "Сроки разработки обычно составляют от 2 до 8 недель в зависимости от объёма проекта. Разработка простых веб-сайтов занимает 2–3 недели, а сложных приложений — 6–8 недель. Подробный график мы предоставим во время первой консультации.",
-    "faq.problem-3": "Как мне связаться с IT-компанией?",
+      "Мы работаем по схеме оплаты 50/50: 50% авансом и 50% по завершении проекта. Оплата возможна любым удобным для вас способом, включая международные переводы.",
+    "faq.problem-3": "Do you provide support after project delivery?",
     "faq.answer-3":
-      "Начать легко! Просто свяжитесь с нами через наш сайт, по электронной почте или по телефону. Мы назначим консультацию, чтобы обсудить ваш проект, предоставим предложение, и после его одобрения начнём работу, заключив чёткий договор и определив сроки.",
-    "faq.problem-4":
-      "Можете ли вы помочь моему текущему сайту выглядеть более профессионально?",
+      "Да. Мы предлагаем специализированную постпроектную поддержку, чтобы обеспечить бесперебойную работу и долгосрочную стабильность вашего решения.",
+    "faq.problem-4": "Можно ли вносить изменения в ходе проекта?",
     "faq.answer-4":
-      "Конечно! Мы специализируемся на редизайне и улучшении веб-сайтов. Мы можем улучшить дизайн, удобство использования, производительность и функциональность вашего сайта, придав ему более профессиональный и современный вид.",
-    "faq.problem-5": "Когда мне платить?",
+      "Yes, changes are possible during the project. However, please note that significant modifications may affect both the timeline and the cost.",
+    "faq.problem-5": "Предоставляете ли вы хостинг, домены и серверы?",
     "faq.answer-5":
-      "Обычно мы работаем по графику оплаты: 50% авансом при начале проекта и 50% по его завершении. Для более крупных проектов мы можем организовать поэтапную оплату. Условия оплаты будут чётко прописаны в вашем договоре.",
+      "Да. При необходимости мы можем предоставить и управлять хостингом, регистрацией доменов и серверной инфраструктурой.",
 
     //TESTIMONIALS
     "testimonia.enter": "ОТЗЫВЫ",
@@ -209,7 +215,7 @@ const translations = {
     "contact.button": "Oтправить",
 
     // Footer
-    "footer.col.title-1": "OOO ASI GLOBAL Услуги Pvt Ltd",
+    "footer.col.title-1": "ASI Global IT Услуги Pvt Ltd",
     "footer.col.text-1":
       "ИТ-услуги и ИТ-консалтинг, 11-50 сотрудников, штаб-квартира в Дехрадуне, Уттаракханд, тип: публичная компания.",
     "footer.address": "Чиланзар, TK, Узбекистан",

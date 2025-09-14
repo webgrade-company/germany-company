@@ -142,15 +142,13 @@ html {
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-/* Autofill bo'lganda style */
 input:-webkit-autofill {
-  background-color: #1e293b !important; /* sening bg-slate-700/50 ranging */
+  background-color: #1e293b !important;
   -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important;
   -webkit-text-fill-color: white !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* Focus bo'lganda ham */
 input:-webkit-autofill:focus {
   background-color: #1e293b !important;
   -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important;

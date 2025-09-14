@@ -21,7 +21,7 @@ export default function Home() {
       {/* <WhyChooseUsSection /> */}
       <StatisticsSection />
       <FAQComponent />
-      <TestimonialsComponent />
+      {/* <TestimonialsComponent /> */}
       <ContactComponent />
     </div>
   );
