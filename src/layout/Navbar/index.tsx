@@ -14,7 +14,6 @@ import { useLanguage } from "@/context/language-context";
 
 const NavbarLayout = () => {
   const { t } = useLanguage();
-  const [isOpen, setIsOpen] = useState(false);
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -53,21 +52,21 @@ const NavbarLayout = () => {
     }
   }, [setLanguage]);
 
-  const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-    setLastScrollY(window.scrollY);
-  };
+  // const controlNavbar = () => {
+  //   if (window.scrollY > lastScrollY) {
+  //     setShow(false);
+  //   } else {
+  //     setShow(true);
+  //   }
+  //   setLastScrollY(window.scrollY);
+  // };
 
-  useEffect(() => {
-    window.addEventListener("scroll", controlNavbar);
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-    };
-  }, [lastScrollY]);
+  // useEffect(() => {
+  //   window.addEventListener("scroll", controlNavbar);
+  //   return () => {
+  //     window.removeEventListener("scroll", controlNavbar);
+  //   };
+  // }, [lastScrollY]);
 
   const menuItems = [
     { name: t("nav.home") as string, href: "hero" },
@@ -125,7 +124,6 @@ const NavbarLayout = () => {
               setLanguage(val as "en" | "ru");
               localStorage.setItem("language", val);
             }}
-            onOpenChange={(open) => setIsOpen(open)}
           >
             <SelectTrigger className="w-[140px] bg-green-700 text-white rounded-lg">
               <SelectValue placeholder="Select a language" />

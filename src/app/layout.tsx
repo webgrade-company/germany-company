@@ -18,14 +18,31 @@ export const metadata: Metadata = {
     apple: [{ url: "/favicon/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/favicon/site.webmanifest",
-  keywords: ["ASI Global IT"],
-  authors: [{ name: "Muhammad Yusuf Nasrulloh" }],
+  keywords: [
+    "ASI Global IT",
+    "Order a website",
+    "Website development services",
+    "Create a business website",
+    "Affordable website design",
+    "Website with SEO optimization",
+    "Corporate website development",
+    "Order an online store",
+    "Create an online platform",
+    "SaaS development services",
+    "IT services for business",
+    "Mobile app development services",
+    "Web design and promotion",
+    "Web application development",
+    "IT consulting services",
+    "IT outsourcing company",
+  ],
+  authors: [{ name: "ASI Global IT" }],
   creator: "Muhammad Yusuf Nasrulloh",
   publisher: "Muhammad Yusuf Nasrulloh",
   formatDetection: {
-    email: false,
+    email: true,
     address: false,
-    telephone: false,
+    telephone: true,
   },
   metadataBase: new URL("https://asiglobalit.com"),
   alternates: {
@@ -37,11 +54,11 @@ export const metadata: Metadata = {
     description:
       "ASI Global provides IT solutions and software services to help businesses grow worldwide",
     url: "https://asiglobalit.com",
-    siteName: "Muhammad Yusuf Nasrulloh",
+    siteName: "ASI Global IT",
     images: [
       {
-        url: "/myImg.jpg",
-        width: 1200,
+        url: "/logo.png",
+        width: 630,
         height: 630,
         alt: "ASI Global IT - Web Site",
       },
@@ -82,7 +99,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -92,22 +108,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="manifest" href="/favicon/site.webmanifest" />
-        <meta name="theme-color" content="#3b82f6" />
-        <meta name="author" content="Muhammad Yusuf Nasrulloh" />
+        <meta name="theme-color" content="#439e0a" />
+        <meta name="author" content="ASI Global IT" />
         <meta
           name="description"
-          content="Muhammad Yusuf Nasrulloh - Full Stack Developer portfolio from Tashkent, Uzbekistan. React, Node.js, TypeScript expert."
+          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
         />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta
-          name="twitter:image"
-          content="https://asiglobalit.com/logo.png"
-        />
-        <meta
-          name="apple-mobile-web-app-title"
-          content="ASI Global IT"
-        />
+        <meta name="twitter:image" content="https://asiglobalit.com/logo.png" />
+        <meta name="apple-mobile-web-app-title" content="ASI Global IT" />
         <link rel="canonical" href="https://asiglobalit.com/" />
         <meta
           name="google-site-verification"
@@ -118,17 +128,15 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Muhammad Yusuf Nasrulloh",
-              url: "https://muhammad-yusuf.uz",
-              sameAs: [
-                "https://github.com/muhammadyusuf622",
-                "https://www.linkedin.com/in/muhammad-yusuf-nasrulloh-1757a2357/",
-              ],
-              jobTitle: "Full Stack Developer",
+              "@type": "Organization",
+              name: "ASI Global IT",
+              url: "https://asiglobalit.com",
+              logo: "https://asiglobalit.com/logo.png",
+              sameAs: [""],
+              jobTitle: "Create An Application For Technologies",
               worksFor: {
                 "@type": "Organization",
-                name: "Portfolio",
+                name: "ASI Global IT",
               },
             }),
           }}
