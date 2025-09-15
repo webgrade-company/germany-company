@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     "Web application development",
     "IT consulting services",
     "IT outsourcing company",
+    "it services in europe"
   ],
   authors: [{ name: "ASI Global IT" }],
   creator: "Muhammad Yusuf Nasrulloh",
@@ -91,7 +92,7 @@ export const metadata: Metadata = {
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
+  subsets: ["latin", "cyrillic"],
 });
 
 const geistMono = Geist_Mono({
@@ -121,7 +122,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://asiglobalit.com/" />
         <meta
           name="google-site-verification"
-          content="pGjS4zQzBTsiXmh_QOqD-NAmW9TH_982Mt-3gTedxGQ"
+          content="IXIEAms8POWVYMOAbBKp0rl8RNEJfXidH4eWO5urkeg"
         />
         <script
           type="application/ld+json"
