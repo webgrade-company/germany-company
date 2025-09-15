@@ -102,6 +102,27 @@ export default function RootLayout({
         <meta name="theme-color" content="#439e0a" />
         <meta name="author" content="ASI Global IT" />
         <meta
+          property="og:title"
+          content="ASI Global | IT & Software Solutions"
+        />
+        <meta property="og:image" content="https://asiglobalit.com/logo.png" />
+        <meta property="og:url" content="https://asiglobalit.com" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="ASI Global | IT & Software Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
+        />
+        <meta name="twitter:image" content="https://asiglobalit.com/logo.png" />
+        <meta
+          property="og:description"
+          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
+        />
+        <meta
           name="description"
           content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
         />
@@ -146,8 +167,7 @@ export default function RootLayout({
           href="/apple-touch-icon.png"
         />
       </head>
-      <body
-      >
+      <body>
         <LanguageProvider>
           <NavbarLayout />
           {children}
