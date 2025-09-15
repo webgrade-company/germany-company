@@ -29,8 +29,8 @@ const translations = {
 
     //Hero Section
 
-    "hero.welcome": ["IT Solutions for Every Challenge"],
-    "hero.title": ["Your", "Problems", "IT", "Answers"],
+    "hero.welcome": ["Your Problems Out It solutions"],
+    "hero.title": ["IT", "Solutions", "for Every", "Challenge"],
     "hero.text": "Turning Issues Into IT Solutions",
     "hero.button": "Explore",
 

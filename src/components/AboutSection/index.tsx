@@ -31,7 +31,7 @@ export default function AboutSection() {
               {t("about.text-2")}
             </p>
 
-            <div className="pt-4">
+            <div className="relative z-10 pt-4">
               <button
                 onClick={() => {
                   const element = document.getElementById("contact");

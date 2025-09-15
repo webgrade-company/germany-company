@@ -6,9 +6,9 @@ import { LanguageProvider } from "@/context/language-context";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "ASI Global IT - Full Stack Developer | Portfolio",
+  title: "ASI Global | IT & Software Solutions",
   description:
-    "ASI Global IT - Professional Full Stack Developer from Tashkent, Uzbekistan. Expert in React, Node.js, TypeScript, and modern web technologies. View my projects, skills, and experience.",
+    "ASI Global provides IT solutions and software services to help businesses grow worldwide",
   icons: {
     icon: [
       { url: "/favicon/favicon-96x96.png", sizes: "96x96", type: "image/png" },
@@ -27,16 +27,16 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://muhammad-yusuf.uz"),
+  metadataBase: new URL("https://asiglobalit.com"),
   alternates: {
     canonical: "/",
   },
 
   openGraph: {
-    title: "Muhammad Yusuf Nasrulloh - Full Stack Developer Portfolio",
+    title: "ASI Global | IT & Software Solutions",
     description:
-      "Professional Full Stack Developer specializing in React, Node.js, TypeScript, and modern web technologies. Based in Tashkent, Uzbekistan.",
-    url: "https://muhammad-yusuf.uz",
+      "ASI Global provides IT solutions and software services to help businesses grow worldwide",
+    url: "https://asiglobalit.com",
     siteName: "Muhammad Yusuf Nasrulloh",
     images: [
       {
@@ -51,10 +51,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Yusuf Nasrulloh - Full Stack Developer Portfolio",
+    title: "ASI Global | IT & Software Solutions",
     description:
-      "Professional Full Stack Developer specializing in React, Node.js, TypeScript, and modern web technologies.",
-    images: ["https://www.muhammad-yusuf.uz/myImg.jpg"],
+      "ASI Global provides IT solutions and software services to help businesses grow worldwide",
+    images: ["https://asiglobalit.com/logo.png"],
   },
   robots: {
     index: true,
@@ -68,8 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google:
-      "google-site-verification=pGjS4zQzBTsiXmh_QOqD-NAmW9TH_982Mt-3gTedxGQ", // Google Search Console verification code
+    google: "", // Google Search Console verification code
   },
 };
 
@@ -92,6 +91,48 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta name="theme-color" content="#3b82f6" />
+        <meta name="author" content="Muhammad Yusuf Nasrulloh" />
+        <meta
+          name="description"
+          content="Muhammad Yusuf Nasrulloh - Full Stack Developer portfolio from Tashkent, Uzbekistan. React, Node.js, TypeScript expert."
+        />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta
+          name="twitter:image"
+          content="https://asiglobalit.com/logo.png"
+        />
+        <meta
+          name="apple-mobile-web-app-title"
+          content="ASI Global IT"
+        />
+        <link rel="canonical" href="https://asiglobalit.com/" />
+        <meta
+          name="google-site-verification"
+          content="pGjS4zQzBTsiXmh_QOqD-NAmW9TH_982Mt-3gTedxGQ"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Muhammad Yusuf Nasrulloh",
+              url: "https://muhammad-yusuf.uz",
+              sameAs: [
+                "https://github.com/muhammadyusuf622",
+                "https://www.linkedin.com/in/muhammad-yusuf-nasrulloh-1757a2357/",
+              ],
+              jobTitle: "Full Stack Developer",
+              worksFor: {
+                "@type": "Organization",
+                name: "Portfolio",
+              },
+            }),
+          }}
+        />
         <link
           rel="icon"
           type="image/png"

@@ -13,8 +13,8 @@ import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
 const NavbarLayout = () => {
-
   const { t } = useLanguage();
+  const [isOpen, setIsOpen] = useState(false);
 
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -44,7 +44,7 @@ const NavbarLayout = () => {
 
   useEffect(() => {
     setActive(t("nav.home"));
-  }, [t])
+  }, [t]);
 
   useEffect(() => {
     const stored = localStorage.getItem("language");
@@ -85,7 +85,12 @@ const NavbarLayout = () => {
       const y = element.getBoundingClientRect().top + window.scrollY - 60;
       window.scrollTo({ top: y, behavior: "smooth" });
     }
-    setMenuOpen(false);
+
+    if (window.scrollY === 0) {
+      setMenuOpen(true);
+    } else {
+      setMenuOpen(false);
+    }
   };
 
   return (
@@ -120,6 +125,7 @@ const NavbarLayout = () => {
               setLanguage(val as "en" | "ru");
               localStorage.setItem("language", val);
             }}
+            onOpenChange={(open) => setIsOpen(open)}
           >
             <SelectTrigger className="w-[140px] bg-green-700 text-white rounded-lg">
               <SelectValue placeholder="Select a language" />
@@ -143,10 +149,11 @@ const NavbarLayout = () => {
         </button>
 
         {/* Mobile Dropdown */}
-        {menuOpen && (
           <div
             ref={menuRef}
-            className="absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-md shadow-lg md:hidden flex flex-col items-center gap-4 py-6"
+            className={`absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-md shadow-lg md:hidden flex flex-col items-center gap-4 py-6 transition-all duration-300 ${
+              menuOpen ? "block" : "hidden"
+            }`}
           >
             {menuItems.map((item, index) => (
               <span
@@ -180,7 +187,6 @@ const NavbarLayout = () => {
               </SelectContent>
             </Select>
           </div>
-        )}
       </div>
     </nav>
   );
