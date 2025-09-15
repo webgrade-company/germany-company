@@ -101,6 +101,18 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#439e0a" />
         <meta name="author" content="ASI Global IT" />
+        <meta
+          name="description"
+          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
+        />
+        <meta
+          property="og:title"
+          content="ASI Global | IT & Software Solutions"
+        />
+        <meta
+          property="og:description"
+          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
+        />
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
