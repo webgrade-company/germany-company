@@ -1,8 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://asiglobalit.com/sitemap.xml
+# Host
+Host: https://asiglobalit.com
 
-# Crawl-delay
-Crawl-delay: 1
+# Sitemaps
+Sitemap: https://asiglobalit.com/sitemap.xml

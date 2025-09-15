@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "", // Google Search Console verification code
+    google: "IXIEAms8POWVYMOAbBKp0rl8RNEJfXidH4eWO5urkeg", // Google Search Console verification code
   },
 };
 
@@ -101,35 +101,12 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#439e0a" />
         <meta name="author" content="ASI Global IT" />
-        <meta
-          property="og:title"
-          content="ASI Global | IT & Software Solutions"
-        />
-        <meta property="og:image" content="https://asiglobalit.com/logo.png" />
-        <meta property="og:url" content="https://asiglobalit.com" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="ASI Global | IT & Software Solutions"
-        />
-        <meta
-          name="twitter:description"
-          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
-        />
-        <meta name="twitter:image" content="https://asiglobalit.com/logo.png" />
-        <meta
-          property="og:description"
-          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
-        />
-        <meta
-          name="description"
-          content="ASI Global provides IT solutions and software services to help businesses grow worldwide"
-        />
+
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="twitter:image" content="https://asiglobalit.com/logo.png" />
         <meta name="apple-mobile-web-app-title" content="ASI Global IT" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="application-name" content="ASI Global IT" />
         <link rel="canonical" href="https://asiglobalit.com/" />
         <meta
           name="google-site-verification"
