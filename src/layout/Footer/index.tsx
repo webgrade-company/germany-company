@@ -105,10 +105,13 @@ const FooterComponent = () => {
               <address className="space-y-3 not-italic">
                 <div className="flex items-center space-x-3 text-slate-300">
                   <MapPin
-                    className="w-4 h-4 text-teal-400"
+                    className="w-13 h-13 text-teal-400"
                     aria-hidden="true"
                   />
-                  <span className="text-sm">{t("footer.address")}</span>
+                  <span className="text-sm">
+                    9, 3rd Dead-End Street (3-tor ko‘chasi), Koshona, Yuqori
+                    Beshqurgon MFI, Olmazor District, Tashkent City, Uzbekistan
+                  </span>
                 </div>
                 <div className="flex items-center space-x-3 text-slate-300">
                   <Phone className="w-4 h-4 text-teal-400" aria-hidden="true" />

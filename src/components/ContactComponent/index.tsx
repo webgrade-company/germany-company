@@ -139,7 +139,10 @@ const ContactComponent = () => {
                     required
                     id="name"
                   />
-                  <label htmlFor="name" className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label
+                    htmlFor="name"
+                    className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800"
+                  >
                     {t("conteat.name")}
                   </label>
                 </div>
@@ -158,7 +161,10 @@ const ContactComponent = () => {
                     maxLength={12}
                     id="number"
                   />
-                  <label htmlFor="number" className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label
+                    htmlFor="number"
+                    className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800"
+                  >
                     {t("conteat.phone")}
                   </label>
                 </div>
@@ -195,7 +201,10 @@ const ContactComponent = () => {
                     required
                     id="message"
                   />
-                  <label htmlFor="message" className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800">
+                  <label
+                    htmlFor="message"
+                    className="absolute left-4 -top-2.5 bg-slate-800 px-2 text-sm text-teal-400 transition-all duration-300 peer-placeholder-shown:text-base peer-placeholder-shown:text-slate-400 peer-placeholder-shown:top-4 peer-placeholder-shown:bg-transparent peer-focus:-top-2.5 peer-focus:text-sm peer-focus:text-teal-400 peer-focus:bg-slate-800"
+                  >
                     {t("conteat.message")}
                   </label>
                 </div>
@@ -240,14 +249,16 @@ const ContactComponent = () => {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3 text-white">
                       <div className="w-10 h-10 bg-cyan-500 rounded-lg flex items-center justify-center">
-                        <MapPin className="w-5 h-5" />
+                        <MapPin className="w-10 h-5" />
                       </div>
                       <div>
                         <p className="font-medium">
                           {t("contact.info.address")}
                         </p>
                         <p className="text-sm text-slate-300">
-                          123 Business St, City, Country
+                          9, 3rd Dead-End Street (3-tor ko‘chasi), Koshona,
+                          Yuqori Beshqurgon MFI, Olmazor District, Tashkent
+                          City, Uzbekistan
                         </p>
                       </div>
                     </div>
