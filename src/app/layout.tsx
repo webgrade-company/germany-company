@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FooterLayout, NavbarLayout } from "@/layout";
 import { LanguageProvider } from "@/context/language-context";
@@ -99,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <link rel="manifest" href="/site.webmanifest" />
         <meta name="theme-color" content="#439e0a" />
         <meta name="author" content="ASI Global IT" />
         <meta
