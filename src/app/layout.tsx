@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     "Web application development",
     "IT consulting services",
     "IT outsourcing company",
-    "it services in europe"
+    "it services in europe",
   ],
   authors: [{ name: "ASI Global IT" }],
   creator: "Muhammad Yusuf Nasrulloh",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: "ASI Global IT",
     images: [
       {
-        url: "/logo.png",
+        url: "https://asiglobalit.com/logo.png",
         width: 630,
         height: 630,
         alt: "ASI Global IT - Web Site",
