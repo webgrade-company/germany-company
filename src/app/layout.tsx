@@ -145,7 +145,6 @@ export default function RootLayout({
           sizes="180x180"
           href="/apple-touch-icon.png"
         />
-        <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
       <body
       >
