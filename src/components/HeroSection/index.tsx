@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               {t("hero.title")[0]}{" "}
-              <span className="text-green-400"> {t("hero.title")[1]} </span>,
+              <span className="text-green-400"> {t("hero.title")[1]} </span>
             </h1>
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               <span className="text-green-400">{t("hero.title")[2]}</span>{" "}
