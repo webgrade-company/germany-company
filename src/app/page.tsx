@@ -13,17 +13,27 @@ import {
 export default function Home() {
   return (
     <div className="">
-      <HeroSection />
-      <ScrollBasedVelocityDemo />
-      <AboutSection />
-      <OurService />
+      <section>
+        <HeroSection />
+      </section>
+      <section>
+        <ScrollBasedVelocityDemo />
+      </section>
+      <section>
+        <AboutSection />
+      </section>
+      <section>
+        <OurService />
+      </section>
       {/* <WhyChooseUsSection /> */}
       {/* <StatisticsSection /> */}
-      <FAQComponent />
+      <section>
+        <FAQComponent />
+      </section>
       {/* <TestimonialsComponent /> */}
-      <ContactComponent />
+      <section>
+        <ContactComponent />
+      </section>
     </div>
   );
 }
-
-
