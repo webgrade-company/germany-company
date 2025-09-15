@@ -11,7 +11,7 @@ export default function HeroSection() {
   return (
     <div
       id="hero"
-      className="min-h-screen relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center p-8"
+      className="min-h-screen mt-15 sm:mt-0 relative bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 flex items-center justify-center p-8"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
         {/* Left Content */}
@@ -36,7 +36,7 @@ export default function HeroSection() {
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               {t("hero.title")[0]}{" "}
-              <span className="text-green-400"> {t("hero.title")[1]} </span>
+              <span className="text-green-400"> {t("hero.title")[1]} </span>,
             </h1>
             <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
               <span className="text-green-400">{t("hero.title")[2]}</span>{" "}
@@ -50,7 +50,7 @@ export default function HeroSection() {
             <button onClick={() => {
               const element = document.getElementById("contact");
               if(element){
-                const y = element.getBoundingClientRect().top + window.scrollY;
+                const y = element.getBoundingClientRect().top + window.scrollY - 60;
                 window.scrollTo({top: y, behavior: "smooth"});
               }
             }} className="bg-gradient-to-r flex items-center gap-3 from-green-500 to-teal-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-colors duration-300 shadow-lg hover:shadow-xl group">
